@@ -739,16 +739,16 @@ elif st.session_state['page'] == "Руководство пользовател�
 
 # === Футер внизу страницы (автор) ===
 # Постоянная надпись внизу лево, вне зависимости от содержимого
-st.markdown("""
-    <style>
-        .bottom-right {
-            position: fixed;
-            right: 15px;
-            bottom: 10px;
-            font-size: 0.75em;
-            color: #333333;
-            z-index: 9999;
-        }
-    </style>
-    <div class="bottom-right">© Created by Rahimov M.A. TTU 2025</div>
-""", unsafe_allow_html=True)
+# st.markdown("""
+#     <style>
+#         .bottom-right {
+#             position: fixed;
+#             right: 15px;
+#             bottom: 10px;
+#             font-size: 0.75em;
+#             color: #333333;
+#             z-index: 9999;
+#         }
+#     </style>
+#     <div class="bottom-right">© Created by Rahimov M.A. TTU 2025</div>
+# """, unsafe_allow_html=True)
