@@ -448,7 +448,7 @@ if st.session_state.get("page") == "CatBoost моделирование":
             y_tmp = df[target_col]
             if not pd.api.types.is_numeric_dtype(y_tmp):
                 y_tmp = pd.factorize(y_tmp)[0]
-            if len(np.unique(y_tmp.dropna())) == 2:
+            if len(np.unique(pd.Series(y_tmp).dropna())) == 2:
                 pos_rate = float((y_tmp == 1).mean())
                 auto_w = round(1.0 / max(pos_rate, 1e-6), 2)
                 st.caption(f"Автовес положительного класса ≈ {auto_w}")
