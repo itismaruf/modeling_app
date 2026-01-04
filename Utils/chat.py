@@ -1,6 +1,6 @@
 import streamlit as st
 
-from AI_helper import chat_with_context
+from Utils.AI_helper import chat_with_context
 
 def continue_chat(user_message):
     """Обрабатывает сообщение пользователя с учётом контекста проекта."""

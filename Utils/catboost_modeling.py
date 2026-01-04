@@ -423,7 +423,8 @@ def predict_new_object(model, feature_values: dict, task: str, threshold: float 
     cat_idx = st.session_state.get("cat_features_idx", [])
     feature_cols = st.session_state.get("feature_cols", X_new.columns.tolist())
 
-    # Приводим типы
+    # Приводим типы (сначала выравниваем порядок столбцов)
+    X_new = X_new.reindex(columns=feature_cols)
     for i, col in enumerate(feature_cols):
         if i in cat_idx:
             X_new[col] = X_new[col].astype(str)
@@ -456,7 +457,8 @@ def explain_prediction(model, X_new: pd.DataFrame, feature_names: list, top_n: i
     cat_idx = st.session_state.get("cat_features_idx", [])
     feature_cols = st.session_state.get("feature_cols", X_new.columns.tolist())
 
-    # Приводим типы
+    # Приводим типы (сначала выравниваем порядок столбцов)
+    X_new = X_new.reindex(columns=feature_cols)
     for i, col in enumerate(feature_cols):
         if i in cat_idx:
             X_new[col] = X_new[col].astype(str)

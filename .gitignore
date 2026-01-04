@@ -1,34 +1,38 @@
-# Python cache
+# Python
 __pycache__/
 *.py[cod]
 *$py.class
-
-# Virtual environments
+*.so
+.Python
 venv/
 env/
-.venv/
+ENV/
 
-# VSCode / JetBrains
+# Streamlit
+.streamlit/secrets.toml
+
+# IDE
 .vscode/
 .idea/
+*.swp
+*.swo
+*~
 
-# macOS
+# OS
 .DS_Store
+Thumbs.db
 
-# Logs, env files
-*.log
-*.sqlite3
-*.env
-.env
+# Data files (uncomment if needed)
+# *.csv
+# *.xlsx
+# *.xls
 
-# Build / packaging
-build/
-dist/
-*.egg-info/
-.eggs/
-
-# Test cache
-.pytest_cache/venv/
-catboost_info/
+# Model files
 *.pkl
-*.csv
+*.joblib
+
+# Logs
+*.log
+
+# Git
+.git/
